@@ -22,7 +22,7 @@ public class BasicTopicStreamingSample {
         env.addSource(new JMSTopicSource<String>(
                 jmsEnv,
                 "flink_cf",
-                "flink_queue",
+                "flink/topic",
                 new JMSTextTranslator())
         ).print();
 
