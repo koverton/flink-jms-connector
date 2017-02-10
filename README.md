@@ -29,3 +29,5 @@ public class BasicTopicStreamingSample {
         env.execute();
     }
 ```
+
+This uses a sample `JMSTranslator` instance for JMS TextMessages. For a custom payload you should implement your own `JMSTranslator`, which would be the bulk of the work for integrating any JMS consumer. I elected not to use Flink's existing serialization approach as it only deals with primitive types and arrays, where you'd really prefer serialization from the full inbound message to access headers.
