@@ -73,4 +73,6 @@ public class JMSTextTranslator extends JMSTranslator<String> {
     }
 }
 
+end of file.
+
 ```
